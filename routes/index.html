@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background: #ced7d8;
+            }
+            #box{
+                text-align: center;
+                font-family: sans-serif;
+                margin : 100px auto;
+                width: 40%;
+                background : whitesmoke;
+                border-radius: 20px;
+                padding: 30px 0;
+                box-shadow: 5px 5px 10px 2px slategrey;
+
+            }
+            #welcome{
+                margin : 50px;
+                font-size: 20px;
+            }
+            #prompt{
+                font-size: 20px;
+            }
+            #signUp{
+                background : steelblue;
+                margin: 50px;
+                font-size: 30px;
+                border-radius: 50px;
+                box-shadow: 5px 5px 5px 2px slategrey;
+        
+            }
+            #signIn{
+                background : steelblue;
+                margin : 50px;
+                font-size: 30px;
+                box-shadow: 5px 5px 5px 2px slategrey;
+                border-radius: 50px;
+            }
+            #signUpText{
+                padding : 10px;
+                color: white;
+                
+            }
+            #signInText{
+                padding : 10px;
+                color: white;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <div id="welcome">
+                <h1>Welcome to the Voting App</h1>
+            </div>
+            <div id="prompt">
+                <p>Please Sign up/Sign in to vote</p>
+            </div>
+            <div id="signUp">
+                <a style="text-decoration: none" href= "/register">
+                    <p id= "signUpText">Sign Up</p>
+                </a>
+            </div>
+            <div id="signIn">
+                <a style="text-decoration: none" href = "/login">
+                    <p id= "signInText"> Sign In</p>
+                </a>
+            </div>
+        </div>
+    </body>
+</html>

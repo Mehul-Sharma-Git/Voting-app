@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <style>
+            body{
+                background : grey;
+            }
+        </style>
+                  
+    </head>
+    <body>
+        <canvas id="myChart" style="height: 300px; width : 100%"></canvas> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+        <script>
+
+        window.onload = function(){
+            var ctx = document.getElementById('myChart');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['DELL', 'ASUS', 'HP', 'ACER', 'APPLE'],
+                    datasets: [{
+                        label: 'VoteData',
+                        data: {chartData},
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)'
+                            
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)'
+                            
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    title : {
+                            display : true,
+                            text : 'VoteData',
+                            fontStyle: 'bold',
+                            fontSize : 20,
+                            fontColor : 'black'
+                        },
+                    scales: {
+                        
+                        xAxes: [{
+                            display :true,
+                            scaleLabel : {
+                                display : true,
+                                labelString: 'Brands',
+                                fontSize : 18,
+                                fontColor : 'black'
+
+                            }
+                        }],
+                        yAxes: [{
+                            display :true,
+                            scaleLabel: {
+                                display:true,
+                                labelString: ' Number of Votes',
+                                fontSize : 18,
+                                fontColor : 'black'
+                            },
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+        }
+    </script>
+    </body>
+</html>
