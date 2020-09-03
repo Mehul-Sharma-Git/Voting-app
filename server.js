@@ -128,7 +128,6 @@ app.get('/home', function(request, response) {
 app.post('/home', function(request, response){
     const value = request.body.vote;
     const loginName = request.session.username;
-    console.log(loginName)
     connection.query('SELECT voted FROM data WHERE username=?',loginName, function(error, results){
         if(results[0].voted!== null){
             response.send("You have already voted")
