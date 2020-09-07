@@ -6,45 +6,77 @@
         <title>Register Page</title>
         <style>
             body{
-                background: #ced7d8;
+                background: #34495e;
             }
             #box{
                 text-align: center;
                 font-family: sans-serif;
                 margin : 100px auto;
                 width: 40%;
-                background : whitesmoke;
+                background : #191919;
                 border-radius: 20px;
                 padding: 30px 0;
-                box-shadow: 5px 5px 10px 2px slategrey;
+                transition : 0.5s;
+                
 
             }
-            input{
+            #box h1{
+                color : white;
+                text-transform: uppercase;
+                font-weight: 100;
+            }
+            input[type="text"], input[type="password"]{
+                border:0;
+                background:none;
+                width : 40%;
+                display:block;
+                text-align: center;
+                margin:20px auto;
+                padding:5px;
+                border-radius: 24px;
+                border: 2px solid #3498db;
+                padding : 14px 10px;
+                outline:none;
+                color: white;
+                transition : 0.5s;
+            }
+            input[type="text"]:focus, input[type="password"]:focus{
+                border-color: #2ecc71;
+                width: 80%;
+            }
+            input[type=submit]{
+                border:0;
+                background:none;
+                width : 20%;
                 display:block;
                 text-align: center;
                 margin:10px auto;
                 padding:5px;
-                border-radius: 2px;
-            }
-            input[type=submit]{
-                border-radius: 20px;
+                border-radius: 24px;
+                border: 2px solid #2ecc71;
+                padding : 14px 10px;
+                outline:none;
+                transition : 0.5s;
                 color: white;
-                background: steelblue;
-                cursor: pointer;
-                box-shadow: 5px 5px 5px 2px slategrey;
+                cursor:pointer;
+            }
+            input[type=submit]:hover{
+                background:#2ecc71;
+
             }
         </style>
     </head>
     <body>
         <div id="box">
             <div>
-                <h1>Register Page</h1>
+                <h1>Register</h1>
+                
             </div>
             <form id="regForm" action="register" method="post">
                 <input type="text" name="username" placeholder="Username" required>
                 <input type="password" name="password1" placeholder="Password" required>
                 <input type="password" name="password2" placeholder="Confirm Password" required>
-                <input type="submit">
+                <input type="submit" value= "Register">
             </form>
         </div>
     </body>
