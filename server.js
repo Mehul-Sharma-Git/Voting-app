@@ -65,11 +65,21 @@ app.get('/results', function(request, response){
     })
 });
 
+app.post('/results', function(request,response){
+    
+        connection.query('UPDATE votes SET numberVotes=0', function(error,results){
+            if (error) throw error;
+            connection.query('UPDATE data SET voted = null', function(error,results){
+                if (error) throw error;
+                response.redirect('/results')
+            })
+        })
+})
 app.post('/login', function(request, response) {
 	const username = request.body.username;
 	const password = request.body.password;
 	if (username && password) {
-        if(username==='test' && password=='test'){
+        if(username==='admin' && password=='admin'){
             response.redirect('/results')
         }
         else{
@@ -104,7 +114,7 @@ app.post('/register', function(request, response) {
         }
         connection.query('SELECT * FROM data WHERE username=?', username, function(error, results, fields) {
             if(results.length>0) {
-                response.redirect('/login');
+                response.send('You have already registered. Please login to cast your vote');
                 response.end();
             }
             else{
