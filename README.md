@@ -4,6 +4,8 @@ Simple Voting app created with Node.js and MySQL
 
 Run the following commands in MySQL to initialise the database
 
+      CREATE DATABASE IF NOT EXISTS `votedata` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+      USE `votedata`;
       CREATE TABLE `data` (
       `id` int(11) NOT NULL AUTO_INCREMENT,
       `username` varchar(50) NOT NULL,
